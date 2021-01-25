@@ -7,6 +7,7 @@ const SearchForm = ({ city, setCity, searchCity }) => (
       value={city}
       onChange={(e) => setCity(e.target.value)}
       onKeyPress={(e) => { if (e.key === 'Enter') searchCity(); }}
+      placeholder="city name"
     />
     <button
       type="submit"

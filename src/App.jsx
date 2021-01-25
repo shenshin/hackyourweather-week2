@@ -17,7 +17,7 @@ function App() {
       setError(null);
       setLoading(true);
       if (!cityName) throw new Error('You have not specified a city!');
-      const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${process.env.REACT_APP_OPENWEATHERMAP_API_KEY}&units=metric`);
+      const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${process.env.REACT_APP_OPENWEATHERMAP_API_KEY}&units=metric`);
       if (!response.ok) throw new Error(response.statusText);
       const weatherData = await response.json();
       setCityWeather(weatherData);
